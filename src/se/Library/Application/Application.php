@@ -2,17 +2,14 @@
 namespace se\Library\Application;
 
 
+use se\Library\Commands;
 use Symfony\Component\Console\Command\HelpCommand;
-
 use Symfony\Component\Console\Command\ListCommand;
-
-use se\Library\Commands\GenerateCommand;
-use se\Library\Commands\CompileCommand;
 use Symfony\Component\Console\Application as BaseApplication;
 
 class Application extends BaseApplication
 {
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 	const NAME = 'Library.php';
 	
 	public function __construct()
@@ -23,8 +20,11 @@ class Application extends BaseApplication
 	public function getDefaultCommands()
 	{
 		return array_merge(parent::getDefaultCommands(), array(
-			new CompileCommand(),
-			new GenerateCommand()
+			new Commands\CompileCommand(),
+			new Commands\GenerateLibraryCommand(),
+			new Commands\GenerateClassCommand(),
+			new Commands\GenerateCertCommand(),
+			new Commands\InstallCommand(),
 		));
 	}
 }

@@ -4,3 +4,4 @@ library.phar
 .project
 .buildpath
 vendor/*
+tests/generated/gen/*

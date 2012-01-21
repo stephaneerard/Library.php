@@ -1,25 +1,48 @@
 {
     "name":"se/library.php",
-    "type": "library",
-    "description": "Library maker for PHP",
-    "keywords": [],
-    "homepage": "",
-    "version": "1.0.1",
-    "license": "MIT",
-    "authors": [
+    "type":"library",
+    "description":"Library maker for PHP",
+    "keywords":[
+        
+    ],
+    "homepage":"",
+    "source":"git@github.com:stephaneerard/Workflowing.php.git",
+    "dist":{
+        "type":"zip",
+        "url":"https://github.com/stephaneerard/Workflowing.php/zipball/master"
+    },
+    "version":"1.0.1",
+    "license":"MIT",
+    "authors":[
         {
-            "name": "Stéphane Erard",
-            "email": "stephane.erard@gmail.com"
+            "name":"Stéphane Erard",
+            "email":"stephane.erard@gmail.com"
         }
     ],
-    "require":{
-        "php": ">=5.3",
-        "symfony/console": ">=2.0",
-        "symfony/finder": ">=2.0"
+    "repositories":{
+        "koto":{
+            "package":{
+                "name":"koto/phar-util",
+                "version":"1.0.0",
+                "source":{
+                    "url":"git://github.com/koto/phar-util.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        }
     },
-    "autoload": {
+    "require":{
+        "php":">=5.3",
+        "symfony/console":"2.1.*",
+        "symfony/finder":"2.1.*",
+        "koto/phar-util":">=0.0.0",
+        "symfony/filesystem":"2.1.*",
+        "composer/composer":"*"
+    },
+    "autoload":{
         "psr-0":{
-            "se\\Library": "src/"
+            "se\\Library":"src/"
         }
     }
 }

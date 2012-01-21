@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+$dir = realpath(__DIR__);
+$generation_dir = $dir . '/gen';
+$params = $dir . '/params.json';
+
+passthru("rm $generation_dir -R -f");
+mkdir($generation_dir);
+passthru("library.phar generate  $generation_dir $params");

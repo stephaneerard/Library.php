@@ -1,0 +1,23 @@
+{
+    "tokens":{
+        "dir_file":{
+            "NAMESPACE":"se\\TestLibrary\\TestTest",
+            "NAMESPACE_D":"se\\\\TestLibrary\\\\TestTest",
+            "LIBRARY_NAME":"fezfze"
+        },
+        "dir":{
+            
+        },
+        "file":{
+            "[?php":"<?php",
+            "?]":"?>"
+        }
+    },
+    "post-commands":[
+        "composer.phar install",
+        "git init",
+        "git add *",
+        "git commit -m'initial commit'",
+        "phpunit"
+    ]
+}
