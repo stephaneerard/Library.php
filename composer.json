@@ -44,5 +44,6 @@
         "psr-0":{
             "se\\Library":"src/"
         }
-    }
+    },
+    "bin": ["bin/library.phar", "bin/library.phar.pubkey"]
 }
